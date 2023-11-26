@@ -50,7 +50,7 @@ public class AmpliarPaquete extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtNumeroTarjeta = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
@@ -63,6 +63,11 @@ public class AmpliarPaquete extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         btnVolverErrorPago = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
+        frameCompraExitosa = new javax.swing.JFrame();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        btnVolverCompraExitosa = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -277,7 +282,7 @@ public class AmpliarPaquete extends javax.swing.JFrame {
                             .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(111, Short.MAX_VALUE))
         );
@@ -288,7 +293,7 @@ public class AmpliarPaquete extends javax.swing.JFrame {
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -358,6 +363,56 @@ public class AmpliarPaquete extends javax.swing.JFrame {
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(btnVolverErrorPago)
+                .addContainerGap())
+        );
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        jLabel18.setText("Gracias por comprar con Proyecto chivas");
+
+        jLabel19.setText("Estamos muy agradecidos por tu confianza en nosotros, ");
+
+        btnVolverCompraExitosa.setText("Volver al menu principal");
+        btnVolverCompraExitosa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverCompraExitosaActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("esperamos que disfrutes de nuestros servicios!!!");
+
+        javax.swing.GroupLayout frameCompraExitosaLayout = new javax.swing.GroupLayout(frameCompraExitosa.getContentPane());
+        frameCompraExitosa.getContentPane().setLayout(frameCompraExitosaLayout);
+        frameCompraExitosaLayout.setHorizontalGroup(
+            frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel18)
+                .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                        .addComponent(btnVolverCompraExitosa)
+                        .addGap(209, 209, 209))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                        .addGroup(frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel19)
+                            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addGap(33, 33, 33)))
+                        .addGap(127, 127, 127))))
+        );
+        frameCompraExitosaLayout.setVerticalGroup(
+            frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(btnVolverCompraExitosa)
                 .addContainerGap())
         );
 
@@ -453,7 +508,7 @@ public class AmpliarPaquete extends javax.swing.JFrame {
             frameSeleccionarPaquete.setLocationRelativeTo(null);
             frameSeleccionarPaquete.setSize(600, 310);
             frameSeleccionarPaquete.setVisible(true);
-        }else{
+        } else {
             frameErrorAmpliarPaquete.setLocationRelativeTo(null);
             frameErrorAmpliarPaquete.setSize(550, 190);
             frameErrorAmpliarPaquete.setVisible(true);
@@ -486,10 +541,23 @@ public class AmpliarPaquete extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnFinalizarPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarPagoActionPerformed
-        frameErrorProcesoPago.setVisible(true);
-        frameErrorProcesoPago.setLocationRelativeTo(this);
-        frameErrorProcesoPago.setSize(550, 200);
+        if (!txtNumeroTarjeta.getText().equals("")) {
+            frameCompraExitosa.setVisible(true);
+            frameCompraExitosa.setLocationRelativeTo(this);
+            frameCompraExitosa.setSize(600, 200);
+        }else{
+            frameErrorProcesoPago.setVisible(true);
+            frameErrorProcesoPago.setLocationRelativeTo(this);
+            frameErrorProcesoPago.setSize(550, 200);
+        }
     }//GEN-LAST:event_btnFinalizarPagoActionPerformed
+
+    private void btnVolverCompraExitosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverCompraExitosaActionPerformed
+        frameCompraExitosa.setVisible(false);
+        PaginaPrincipal principal = new PaginaPrincipal();
+        principal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVolverCompraExitosaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -531,9 +599,11 @@ public class AmpliarPaquete extends javax.swing.JFrame {
     private javax.swing.JButton btnFinalizarPago;
     private javax.swing.JButton btnVolver;
     private javax.swing.JButton btnVolverAmpliarPaquete;
+    private javax.swing.JButton btnVolverCompraExitosa;
     private javax.swing.JButton btnVolverErrorPago;
     private javax.swing.JButton btnVolverMenu;
     private javax.swing.JButton btnVolverPago;
+    private javax.swing.JFrame frameCompraExitosa;
     private javax.swing.JFrame frameErrorAmpliarPaquete;
     private javax.swing.JFrame frameErrorProcesoPago;
     private javax.swing.JFrame frameProcesoPago;
@@ -553,7 +623,10 @@ public class AmpliarPaquete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -563,10 +636,10 @@ public class AmpliarPaquete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtNumeroTarjeta;
     // End of variables declaration//GEN-END:variables
 }
