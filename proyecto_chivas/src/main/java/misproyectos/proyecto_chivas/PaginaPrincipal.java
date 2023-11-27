@@ -154,11 +154,15 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarServicioActionPerformed
-        // TODO add your handling code here:
+        CancelarServicio cancelar = new CancelarServicio();
+        cancelar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnCancelarServicioActionPerformed
 
     private void btnConsultarQRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarQRActionPerformed
-        // TODO add your handling code here:
+        ConsultarQR qr = new ConsultarQR();
+        qr.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnConsultarQRActionPerformed
 
     private void btnAmpliarPaqueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAmpliarPaqueteActionPerformed
@@ -174,7 +178,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnViajeActionPerformed
 
     private void btnChivaRumbaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChivaRumbaActionPerformed
-        // TODO add your handling code here:
+        ChivasParaRumbaDisponibles chiva = new ChivasParaRumbaDisponibles();
+        chiva.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnChivaRumbaActionPerformed
 
     /**

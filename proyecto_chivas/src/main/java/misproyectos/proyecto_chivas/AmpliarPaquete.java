@@ -553,10 +553,11 @@ public class AmpliarPaquete extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFinalizarPagoActionPerformed
 
     private void btnVolverCompraExitosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverCompraExitosaActionPerformed
+        dispose();
+        frameProcesoPago.setVisible(false);
         frameCompraExitosa.setVisible(false);
         PaginaPrincipal principal = new PaginaPrincipal();
         principal.setVisible(true);
-        dispose();
     }//GEN-LAST:event_btnVolverCompraExitosaActionPerformed
 
     /**
