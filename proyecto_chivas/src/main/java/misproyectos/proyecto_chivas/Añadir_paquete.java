@@ -15,6 +15,7 @@ public class Añadir_paquete extends javax.swing.JFrame {
      */
     public Añadir_paquete() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -28,10 +29,10 @@ public class Añadir_paquete extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jCheckBox_No = new javax.swing.JCheckBox();
+        jCheckBox_Si = new javax.swing.JCheckBox();
+        btnVolver = new javax.swing.JButton();
+        btnContinuar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,18 +41,33 @@ public class Añadir_paquete extends javax.swing.JFrame {
 
         jLabel2.setText("Si su respuesta es si, se le redirigirá a la sección de personalización de su paquete.");
 
-        jCheckBox1.setText("No");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_No.setText("No");
+        jCheckBox_No.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jCheckBox_NoActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Si");
+        jCheckBox_Si.setText("Si");
+        jCheckBox_Si.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_SiActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Volver");
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Continuar");
+        btnContinuar.setText("Continuar");
+        btnContinuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinuarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,15 +84,15 @@ public class Añadir_paquete extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(184, 184, 184)
-                            .addComponent(jButton1)
+                            .addComponent(btnVolver)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnContinuar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(17, 17, 17))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addGap(154, 154, 154)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox_No, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(108, 108, 108)
-                            .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jCheckBox_Si, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -88,21 +104,46 @@ public class Añadir_paquete extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2))
+                    .addComponent(jCheckBox_No)
+                    .addComponent(jCheckBox_Si))
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnVolver)
+                    .addComponent(btnContinuar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jCheckBox_NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_NoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jCheckBox_NoActionPerformed
+
+    private void jCheckBox_SiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_SiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox_SiActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+    Viajes_disponibles v = new Viajes_disponibles();
+    v.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
+    if (jCheckBox_Si.isSelected() && jCheckBox_No.isSelected()){
+        
+    }else if (jCheckBox_Si.isSelected()){
+        Paquetes_disponibles paquetes = new Paquetes_disponibles();
+        paquetes.setVisible(true);
+        dispose();
+    }else if(jCheckBox_No.isSelected()){
+        Añadir_tour tour = new Añadir_tour();
+        tour.setVisible(true);
+        dispose();
+    }else{
+    }
+    }//GEN-LAST:event_btnContinuarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,10 +181,10 @@ public class Añadir_paquete extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JButton btnContinuar;
+    private javax.swing.JButton btnVolver;
+    private javax.swing.JCheckBox jCheckBox_No;
+    private javax.swing.JCheckBox jCheckBox_Si;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

@@ -15,6 +15,7 @@ public class Añadir_tour extends javax.swing.JFrame {
      */
     public Añadir_tour() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

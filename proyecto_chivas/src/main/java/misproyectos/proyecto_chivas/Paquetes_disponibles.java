@@ -15,6 +15,7 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
      */
     public Paquetes_disponibles() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -30,10 +31,10 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnPaquete1 = new javax.swing.JButton();
+        btnPaquete2 = new javax.swing.JButton();
+        btnPaquete3 = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,13 +57,33 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("SELECCIONAR");
+        btnPaquete1.setText("SELECCIONAR");
+        btnPaquete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaquete1ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("SELECCIONAR");
+        btnPaquete2.setText("SELECCIONAR");
+        btnPaquete2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaquete2ActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("SELECCIONAR");
+        btnPaquete3.setText("SELECCIONAR");
+        btnPaquete3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaquete3ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Volver");
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,12 +103,12 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
                                     .addComponent(jLabel2))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)))
+                            .addComponent(btnPaquete1)
+                            .addComponent(btnPaquete2)
+                            .addComponent(btnPaquete3)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,24 +118,47 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(6, 6, 6)
+                        .addComponent(btnPaquete1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnPaquete2)
+                        .addGap(12, 12, 12)
+                        .addComponent(btnPaquete3))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+    Añadir_paquete paquete = new Añadir_paquete();
+    paquete.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnPaquete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaquete1ActionPerformed
+    Seleccion_productos_viaje productos = new Seleccion_productos_viaje();
+    productos.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnPaquete1ActionPerformed
+
+    private void btnPaquete2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaquete2ActionPerformed
+    Seleccion_productos_viaje productos = new Seleccion_productos_viaje();
+    productos.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnPaquete2ActionPerformed
+
+    private void btnPaquete3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaquete3ActionPerformed
+    Seleccion_productos_viaje productos = new Seleccion_productos_viaje();
+    productos.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnPaquete3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,10 +196,10 @@ public class Paquetes_disponibles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnPaquete1;
+    private javax.swing.JButton btnPaquete2;
+    private javax.swing.JButton btnPaquete3;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

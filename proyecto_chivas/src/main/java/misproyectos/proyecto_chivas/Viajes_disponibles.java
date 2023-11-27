@@ -30,16 +30,16 @@ public class Viajes_disponibles extends javax.swing.JFrame {
         frameError_nocupos = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        btnVolvermenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        TablaViajes = new javax.swing.JTable();
+        btnVolver = new javax.swing.JButton();
+        btnViaje1 = new javax.swing.JButton();
+        btnViaje2 = new javax.swing.JButton();
+        bntViaje3 = new javax.swing.JButton();
 
         frameError_nocupos.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,10 +48,10 @@ public class Viajes_disponibles extends javax.swing.JFrame {
 
         jLabel5.setText("No hay cupos disponibles para este servicio ");
 
-        jButton5.setText("Volver al menu principal");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnVolvermenu.setText("Volver al menu principal");
+        btnVolvermenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnVolvermenuActionPerformed(evt);
             }
         });
 
@@ -69,7 +69,7 @@ public class Viajes_disponibles extends javax.swing.JFrame {
                         .addComponent(jLabel5))
                     .addGroup(frameError_nocuposLayout.createSequentialGroup()
                         .addGap(143, 143, 143)
-                        .addComponent(jButton5)))
+                        .addComponent(btnVolvermenu)))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         frameError_nocuposLayout.setVerticalGroup(
@@ -80,7 +80,7 @@ public class Viajes_disponibles extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVolvermenu, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(96, Short.MAX_VALUE))
         );
 
@@ -93,10 +93,10 @@ public class Viajes_disponibles extends javax.swing.JFrame {
 
         jLabel3.setText("El precio no incluye el paquete/tour extra en caso de seleccionarlos. ");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaViajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
-                {null, "25/30", "24/10/2023", "50.000", "Medellín/La Ceja"},
+                {null, "30/30", "24/10/2023", "50.000", "Medellín/La Ceja"},
                 {null, null, "10:00-17:00", null, null},
                 {null, null, null, null, null},
                 {null, "40/60", "31/10/2023", "50.000", "Medellín/Marinilla"},
@@ -109,25 +109,35 @@ public class Viajes_disponibles extends javax.swing.JFrame {
                 "IMAGEN", "AFORO", "HORARIO", "PRECIO", "SALIDA/DESTINO"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TablaViajes);
 
-        jButton1.setText("Volver");
-
-        jButton2.setText("SELECCIONAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnVolverActionPerformed(evt);
             }
         });
 
-        jButton3.setText("SELECCIONAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnViaje1.setText("SELECCIONAR");
+        btnViaje1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnViaje1ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("SELECCIONAR");
+        btnViaje2.setText("SELECCIONAR");
+        btnViaje2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViaje2ActionPerformed(evt);
+            }
+        });
+
+        bntViaje3.setText("SELECCIONAR");
+        bntViaje3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntViaje3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,15 +156,15 @@ public class Viajes_disponibles extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnViaje1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnViaje2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bntViaje3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -168,39 +178,93 @@ public class Viajes_disponibles extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addComponent(btnViaje1)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnViaje2)
+                        .addGap(29, 29, 29)
+                        .addComponent(bntViaje3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jButton2)
-                        .addGap(44, 44, 44)
-                        .addComponent(jButton3)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton4)))
-                .addGap(27, 27, 27)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        frameError_nocupos.setVisible(true);
-        frameError_nocupos.setLocationRelativeTo(null);
-        frameError_nocupos.setSize(400,320);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnViaje1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViaje1ActionPerformed
+        Object valor = TablaViajes.getValueAt(1, 1);
+        String texto = valor.toString();
+        String[] numeros = texto.split("/");
+        
+        int personas = Integer.parseInt(numeros[0]);
+        int maximas = Integer.parseInt(numeros[1]);
+        
+        if (personas < maximas){
+            Añadir_paquete añadir = new Añadir_paquete();
+            añadir.setVisible(true);
+            dispose();
+        }else{
+            frameError_nocupos.setVisible(true);
+            frameError_nocupos.setLocationRelativeTo(null);
+            frameError_nocupos.setSize(400,320);
+        }
+        
+    }//GEN-LAST:event_btnViaje1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnVolvermenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolvermenuActionPerformed
         PaginaPrincipal a = new PaginaPrincipal();
         a.setVisible(true);
         frameError_nocupos.setVisible(false);
         dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnVolvermenuActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnViaje2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViaje2ActionPerformed
+    Object valor = TablaViajes.getValueAt(4, 1);
+        String texto = valor.toString();
+        String[] numeros = texto.split("/");
+        
+        int personas = Integer.parseInt(numeros[0]);
+        int maximas = Integer.parseInt(numeros[1]);
+        
+        if (personas < maximas){
+            Añadir_paquete añadir = new Añadir_paquete();
+            añadir.setVisible(true);
+            dispose();
+        }else{
+            frameError_nocupos.setVisible(true);
+            frameError_nocupos.setLocationRelativeTo(null);
+            frameError_nocupos.setSize(400,320);
+        }
+    }//GEN-LAST:event_btnViaje2ActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+    PaginaPrincipal a = new PaginaPrincipal();
+    a.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void bntViaje3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntViaje3ActionPerformed
+    Object valor = TablaViajes.getValueAt(7, 1);
+        String texto = valor.toString();
+        String[] numeros = texto.split("/");
+        
+        int personas = Integer.parseInt(numeros[0]);
+        int maximas = Integer.parseInt(numeros[1]);
+        
+        if (personas < maximas){
+            Añadir_paquete añadir = new Añadir_paquete();
+            añadir.setVisible(true);
+            dispose();
+        }else{
+            frameError_nocupos.setVisible(true);
+            frameError_nocupos.setLocationRelativeTo(null);
+            frameError_nocupos.setSize(400,320);
+        }
+    }//GEN-LAST:event_bntViaje3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,18 +302,18 @@ public class Viajes_disponibles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TablaViajes;
+    private javax.swing.JButton bntViaje3;
+    private javax.swing.JButton btnViaje1;
+    private javax.swing.JButton btnViaje2;
+    private javax.swing.JButton btnVolver;
+    private javax.swing.JButton btnVolvermenu;
     private javax.swing.JFrame frameError_nocupos;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

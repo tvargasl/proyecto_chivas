@@ -15,6 +15,7 @@ public class seleccion_productos extends javax.swing.JFrame {
      */
     public seleccion_productos() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -28,23 +29,24 @@ public class seleccion_productos extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
+        jCheckBox_aguardienteL = new javax.swing.JCheckBox();
+        jCheckBox_ronLcaldas = new javax.swing.JCheckBox();
+        jCheckBox_ronLmedellin = new javax.swing.JCheckBox();
+        jCheckBox_packaguila = new javax.swing.JCheckBox();
+        jCheckBox_packpocker = new javax.swing.JCheckBox();
+        jCheckBox_gatorade = new javax.swing.JCheckBox();
+        jCheckBox_agua = new javax.swing.JCheckBox();
+        jCheckBox_smirnoff = new javax.swing.JCheckBox();
+        jCheckBox_buchanans = new javax.swing.JCheckBox();
+        jCheckBox_papaslimon = new javax.swing.JCheckBox();
+        jCheckBox_rosquillas = new javax.swing.JCheckBox();
+        jCheckBox_papasnaturales = new javax.swing.JCheckBox();
+        txtCosto = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
+        btnContinuar = new javax.swing.JButton();
+        btnCalcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,38 +55,44 @@ public class seleccion_productos extends javax.swing.JFrame {
 
         jLabel2.setText("Los productos a escoger varían dependiendo del paquete.");
 
-        jCheckBox1.setText("Litro de aguardiente");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_aguardienteL.setText("Litro de aguardiente");
+        jCheckBox_aguardienteL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jCheckBox_aguardienteLActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Litro de Ron viejo Caldas ");
+        jCheckBox_ronLcaldas.setText("Litro de Ron viejo Caldas ");
 
-        jCheckBox3.setText("Litro de Ron Medellín ");
+        jCheckBox_ronLmedellin.setText("Litro de Ron Medellín ");
 
-        jCheckBox4.setText("Six pack cerveza aguila light ");
+        jCheckBox_packaguila.setText("Six pack cerveza aguila light ");
 
-        jCheckBox5.setText("Six pack cerveza poker  ");
+        jCheckBox_packpocker.setText("Six pack cerveza poker  ");
 
-        jCheckBox6.setText("Gatorade pequeño ");
+        jCheckBox_gatorade.setText("Gatorade pequeño ");
 
-        jCheckBox7.setText("Botella ");
-
-        jCheckBox8.setText("Botella SmirnOff ");
-
-        jCheckBox9.setText("Buchanans 1000 años ");
-
-        jCheckBox10.setText("Papitas Limón Grandes ");
-
-        jCheckBox11.setText("Rosquillas Grandes ");
-
-        jCheckBox12.setText("Papitas Naturales Grandes ");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_agua.setText("Botella de agua");
+        jCheckBox_agua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jCheckBox_aguaActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_smirnoff.setText("Botella SmirnOff ");
+
+        jCheckBox_buchanans.setText("Buchanans 1000 años ");
+
+        jCheckBox_papaslimon.setText("Papitas Limón Grandes ");
+
+        jCheckBox_rosquillas.setText("Rosquillas Grandes ");
+
+        jCheckBox_papasnaturales.setText("Papitas Naturales Grandes ");
+
+        txtCosto.setEditable(false);
+        txtCosto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCostoActionPerformed(evt);
             }
         });
 
@@ -92,20 +100,31 @@ public class seleccion_productos extends javax.swing.JFrame {
 
         jLabel4.setText("El mínimo de dinero a gastar en este paquete es: 100.000 ");
 
-        jButton1.setText("Volver");
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Continuar");
+        btnContinuar.setText("Continuar");
+        btnContinuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinuarActionPerformed(evt);
+            }
+        });
+
+        btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(13, 13, 13)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(232, 232, 232))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -117,28 +136,42 @@ public class seleccion_productos extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox1)
-                                    .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox3)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox5)
-                                    .addComponent(jCheckBox6))
+                                    .addComponent(jCheckBox_aguardienteL)
+                                    .addComponent(jCheckBox_ronLcaldas, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCheckBox_ronLmedellin)
+                                    .addComponent(jCheckBox_packaguila)
+                                    .addComponent(jCheckBox_packpocker)
+                                    .addComponent(jCheckBox_gatorade))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox10)
-                                    .addComponent(jCheckBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox12)))))
+                                    .addComponent(jCheckBox_smirnoff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jCheckBox_buchanans, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jCheckBox_agua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCheckBox_papaslimon)
+                                            .addComponent(jCheckBox_rosquillas, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jCheckBox_papasnaturales))
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
+                        .addGap(23, 23, 23)
                         .addComponent(jLabel4)
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addGap(68, 68, 68)
+                        .addComponent(btnVolver)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnContinuar)))
+                .addContainerGap(51, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(13, 13, 13)
+                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(232, 232, 232))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnCalcular)
+                        .addGap(266, 266, 266))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,50 +182,110 @@ public class seleccion_productos extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox7))
+                    .addComponent(jCheckBox_aguardienteL)
+                    .addComponent(jCheckBox_agua))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox8))
+                    .addComponent(jCheckBox_ronLcaldas)
+                    .addComponent(jCheckBox_smirnoff))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox9))
+                    .addComponent(jCheckBox_ronLmedellin)
+                    .addComponent(jCheckBox_buchanans))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox10))
+                    .addComponent(jCheckBox_packaguila)
+                    .addComponent(jCheckBox_papaslimon))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox11))
+                    .addComponent(jCheckBox_packpocker)
+                    .addComponent(jCheckBox_rosquillas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox12))
+                    .addComponent(jCheckBox_gatorade)
+                    .addComponent(jCheckBox_papasnaturales))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCalcular)
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnVolver)
+                        .addComponent(btnContinuar)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jCheckBox_aguardienteLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_aguardienteLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jCheckBox_aguardienteLActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtCostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCostoActionPerformed
+
+    }//GEN-LAST:event_txtCostoActionPerformed
+
+    private void jCheckBox_aguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_aguaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jCheckBox_aguaActionPerformed
+
+    private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
+        Formulario f = new Formulario();
+        f.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnContinuarActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+    int total = 0;
+    
+    if (jCheckBox_aguardienteL.isSelected()){
+        total += 45000;
+    }
+    if (jCheckBox_ronLcaldas.isSelected()){
+        total += 55000;
+    }
+    if (jCheckBox_ronLmedellin.isSelected()){
+        total += 50000;
+    }
+    if (jCheckBox_packaguila.isSelected()){
+        total += 22000;
+    }
+    if (jCheckBox_packpocker.isSelected()){
+        total += 20000;
+    }
+    if (jCheckBox_gatorade.isSelected()){
+        total += 7000;
+    }
+    if (jCheckBox_agua.isSelected()){
+        total += 4000;
+    }
+    if (jCheckBox_smirnoff.isSelected()){
+        total += 50000;
+    }
+    if (jCheckBox_buchanans.isSelected()){
+        total += 100000;
+    }
+    if (jCheckBox_papaslimon.isSelected()){
+        total += 12000;
+    }
+    if (jCheckBox_rosquillas.isSelected()){
+        total += 8000;
+    }
+    if (jCheckBox_papasnaturales.isSelected()){
+        total += 10000;
+    }
+    
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,24 +323,25 @@ public class seleccion_productos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnContinuar;
+    private javax.swing.JButton btnVolver;
+    private javax.swing.JCheckBox jCheckBox_agua;
+    private javax.swing.JCheckBox jCheckBox_aguardienteL;
+    private javax.swing.JCheckBox jCheckBox_buchanans;
+    private javax.swing.JCheckBox jCheckBox_gatorade;
+    private javax.swing.JCheckBox jCheckBox_packaguila;
+    private javax.swing.JCheckBox jCheckBox_packpocker;
+    private javax.swing.JCheckBox jCheckBox_papaslimon;
+    private javax.swing.JCheckBox jCheckBox_papasnaturales;
+    private javax.swing.JCheckBox jCheckBox_ronLcaldas;
+    private javax.swing.JCheckBox jCheckBox_ronLmedellin;
+    private javax.swing.JCheckBox jCheckBox_rosquillas;
+    private javax.swing.JCheckBox jCheckBox_smirnoff;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCosto;
     // End of variables declaration//GEN-END:variables
 }
