@@ -168,7 +168,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAmpliarPaqueteActionPerformed
 
     private void btnViajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViajeActionPerformed
-        // TODO add your handling code here:
+        Viajes_disponibles a = new Viajes_disponibles();
+        a.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnViajeActionPerformed
 
     private void btnChivaRumbaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChivaRumbaActionPerformed

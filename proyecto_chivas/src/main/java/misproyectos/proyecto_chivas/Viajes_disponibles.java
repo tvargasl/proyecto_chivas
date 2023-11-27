@@ -15,6 +15,7 @@ public class Viajes_disponibles extends javax.swing.JFrame {
      */
     public Viajes_disponibles() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,6 +27,10 @@ public class Viajes_disponibles extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        frameError_nocupos = new javax.swing.JFrame();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -35,6 +40,49 @@ public class Viajes_disponibles extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+
+        frameError_nocupos.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel4.setText("ERROR");
+
+        jLabel5.setText("No hay cupos disponibles para este servicio ");
+
+        jButton5.setText("Volver al menu principal");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout frameError_nocuposLayout = new javax.swing.GroupLayout(frameError_nocupos.getContentPane());
+        frameError_nocupos.getContentPane().setLayout(frameError_nocuposLayout);
+        frameError_nocuposLayout.setHorizontalGroup(
+            frameError_nocuposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameError_nocuposLayout.createSequentialGroup()
+                .addGroup(frameError_nocuposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameError_nocuposLayout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel4))
+                    .addGroup(frameError_nocuposLayout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel5))
+                    .addGroup(frameError_nocuposLayout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jButton5)))
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
+        frameError_nocuposLayout.setVerticalGroup(
+            frameError_nocuposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameError_nocuposLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,6 +121,11 @@ public class Viajes_disponibles extends javax.swing.JFrame {
         });
 
         jButton3.setText("SELECCIONAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("SELECCIONAR");
 
@@ -133,8 +186,21 @@ public class Viajes_disponibles extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        frameError_nocupos.setVisible(true);
+        frameError_nocupos.setLocationRelativeTo(null);
+        frameError_nocupos.setSize(400,320);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        PaginaPrincipal a = new PaginaPrincipal();
+        a.setVisible(true);
+        frameError_nocupos.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,13 +238,17 @@ public class Viajes_disponibles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame frameError_nocupos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
