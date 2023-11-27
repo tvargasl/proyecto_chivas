@@ -9,6 +9,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-        <exec.mainClass>misproyectos.proyecto_chivas.Proyecto_chivas</exec.mainClass>
+        <exec.mainClass>Clases.Main</exec.mainClass>
     </properties>
 </project>
