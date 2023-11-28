@@ -4,6 +4,9 @@
  */
 package Frames;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JEFERSON
@@ -41,6 +44,7 @@ public class ConsultarQR extends javax.swing.JFrame {
         frameQR = new javax.swing.JFrame();
         jLabel7 = new javax.swing.JLabel();
         btnVolverMenuPrincipal = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -162,28 +166,36 @@ public class ConsultarQR extends javax.swing.JFrame {
             }
         });
 
+        ImageIcon icon = new ImageIcon("C:\\Users\\JEFERSON\\Desktop\\Proyecto Final\\proyecto_chivas\\proyecto_chivas\\src\\main\\java\\Frames\\codigoQR.jpg");
+        jLabel9.setIcon(icon);
+
         javax.swing.GroupLayout frameQRLayout = new javax.swing.GroupLayout(frameQR.getContentPane());
         frameQR.getContentPane().setLayout(frameQRLayout);
         frameQRLayout.setHorizontalGroup(
             frameQRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frameQRLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel7)
+                .addContainerGap(99, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameQRLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(frameQRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frameQRLayout.createSequentialGroup()
-                        .addGap(174, 174, 174)
+                        .addGap(23, 23, 23)
                         .addComponent(btnVolverMenuPrincipal))
-                    .addGroup(frameQRLayout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel7)))
-                .addContainerGap(136, Short.MAX_VALUE))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(122, 122, 122))
         );
         frameQRLayout.setVerticalGroup(
             frameQRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frameQRLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel7)
-                .addGap(185, 185, 185)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addComponent(btnVolverMenuPrincipal)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -271,7 +283,7 @@ public class ConsultarQR extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-        if (!txtID.getText().equals("")) {
+        if (txtID.getText().equals("1035971929")) {
             frameSeleccionarServicios.setLocationRelativeTo(null);
             frameSeleccionarServicios.setSize(600, 310);
             frameSeleccionarServicios.setVisible(true);
@@ -287,18 +299,13 @@ public class ConsultarQR extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVolverErrorActionPerformed
 
     private void btnSeleccionarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarServicioActionPerformed
-        /*frameProcesoPago.setVisible(true);
-        frameProcesoPago.setLocationRelativeTo(this);
-        frameProcesoPago.setSize(601, 364);
-        frameSeleccionarServicios.setVisible(false);*/
-        System.out.println(listServicios.getSelectedIndex());
-        if(listServicios.getSelectedIndex() == 0){
+        if (listServicios.getSelectedIndex() != -1) {
             frameSeleccionarServicios.setVisible(false);
             frameQR.setVisible(true);
             frameQR.setLocationRelativeTo(null);
-            frameQR.setSize(600, 200);
-        }else{
-        
+            frameQR.setSize(560, 360);
+        } else {
+            JOptionPane.showMessageDialog(null, "Seleccione correctamente el servicio que desea consultar el QR");
         }
     }//GEN-LAST:event_btnSeleccionarServicioActionPerformed
 
@@ -369,6 +376,7 @@ public class ConsultarQR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> listServicios;
     private javax.swing.JTextField txtID;

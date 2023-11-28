@@ -96,6 +96,7 @@ public class CancelarServicio extends javax.swing.JFrame {
         listServicios.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 7", " " };
             public int getSize() { return strings.length; }
+            public void removeElement(int i){strings[i] = "Cancelado";}
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(listServicios);
@@ -231,7 +232,7 @@ public class CancelarServicio extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIDActionPerformed
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-        if (!txtID.getText().equals("")) {
+        if (txtID.getText().equals("1035971929")) {
             frameSeleccionarServicios.setLocationRelativeTo(null);
             frameSeleccionarServicios.setSize(600, 310);
             frameSeleccionarServicios.setVisible(true);
@@ -253,15 +254,13 @@ public class CancelarServicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVolverAmpliarPaqueteActionPerformed
 
     private void btnSeleccionarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarServicioActionPerformed
-        /*frameProcesoPago.setVisible(true);
-        frameProcesoPago.setLocationRelativeTo(this);
-        frameProcesoPago.setSize(601, 364);
-        frameSeleccionarServicios.setVisible(false);*/
-        System.out.println(listServicios.getSelectedIndex());
-        if(listServicios.getSelectedIndex() == 0){
-            JOptionPane.showMessageDialog(null,"Han transcurrido menos de 72 horas, a tu cuenta asociada al pago se te reembolsará en los próximos días la totalidad del dinero.",null,2);
-        }else{
-            JOptionPane.showMessageDialog(null,"Han transcurrido 72 horas o más, a tu correo te llegará la información necesaria para seguir el proceso de cancelación.",null,2);        }
+        if (listServicios.getSelectedIndex() == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione correctamente el servicio que desea cancelar");
+        } else if (listServicios.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "Han transcurrido 72 horas o más, a tu correo te llegará la información necesaria para seguir el proceso de cancelación.", null, 2);
+        } else { 
+            JOptionPane.showMessageDialog(null, "Han transcurrido menos de 72 horas, a tu cuenta asociada al pago se te reembolsará en los próximos días la totalidad del dinero.", null, 2);
+        }
     }//GEN-LAST:event_btnSeleccionarServicioActionPerformed
 
     private void btnVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverMenuActionPerformed

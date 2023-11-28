@@ -4,11 +4,15 @@
  */
 package Frames;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JEFERSON
  */
 public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
+
+    private int total;
 
     /**
      * Creates new form ChivasParaRumbaDisponibles
@@ -41,6 +45,58 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
         checkNo = new javax.swing.JCheckBox();
         btnContinuar = new javax.swing.JButton();
         btnVolverAñadirPaquete = new javax.swing.JButton();
+        frameSeleccionarPaquete = new javax.swing.JFrame();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        btnVolverMenu = new javax.swing.JButton();
+        btnSeleccionarServicio = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listServicios = new javax.swing.JList<>();
+        frameProcesoPago = new javax.swing.JFrame();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        txtNumeroTarjeta = new javax.swing.JTextField();
+        txtNombreTitular = new javax.swing.JTextField();
+        txtCVV = new javax.swing.JTextField();
+        txtFechaVencimiento = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        btnVolverPago = new javax.swing.JButton();
+        btnFinalizarPago = new javax.swing.JButton();
+        frameErrorProcesoPago = new javax.swing.JFrame();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        btnVolverErrorPago = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        frameCompraExitosa = new javax.swing.JFrame();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        btnVolverCompraExitosa = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        frameSeleccionProductos = new javax.swing.JFrame();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jCheckBox_CocaCola = new javax.swing.JCheckBox();
+        jCheckBox_DeTodito = new javax.swing.JCheckBox();
+        jCheckBoxDoritos = new javax.swing.JCheckBox();
+        jCheckBox_Sprite = new javax.swing.JCheckBox();
+        jCheckBox_CrispetasDulces = new javax.swing.JCheckBox();
+        jCheckBox_CrispetasSaladas = new javax.swing.JCheckBox();
+        jCheckBox_Jet = new javax.swing.JCheckBox();
+        jCheckBox_Speed = new javax.swing.JCheckBox();
+        jCheckBox_Colombiana = new javax.swing.JCheckBox();
+        jCheckBox_Tostacos = new javax.swing.JCheckBox();
+        jCheckBox_Choclitos = new javax.swing.JCheckBox();
+        jCheckBox_Manzana = new javax.swing.JCheckBox();
+        jLabel26 = new javax.swing.JLabel();
+        txtCosto = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        btnVolver1 = new javax.swing.JButton();
+        btnContinuar1 = new javax.swing.JButton();
+        btnCalcular = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -166,6 +222,450 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
                 .addGap(55, 55, 55))
         );
 
+        jLabel9.setText("Se ha encontrado uno o más servicios asociados a este documento de identidad.");
+
+        jLabel10.setText("Seleccione el que desea a realizar la ampliación del paquete.");
+
+        btnVolverMenu.setText("Volver al menú principal");
+        btnVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverMenuActionPerformed(evt);
+            }
+        });
+
+        btnSeleccionarServicio.setText("Seleccionar");
+        btnSeleccionarServicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeleccionarServicioActionPerformed(evt);
+            }
+        });
+
+        listServicios.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 7", " " };
+            public int getSize() { return strings.length; }
+            public void removeElement(int i){strings[i] = "Cancelado";}
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(listServicios);
+
+        javax.swing.GroupLayout frameSeleccionarPaqueteLayout = new javax.swing.GroupLayout(frameSeleccionarPaquete.getContentPane());
+        frameSeleccionarPaquete.getContentPane().setLayout(frameSeleccionarPaqueteLayout);
+        frameSeleccionarPaqueteLayout.setHorizontalGroup(
+            frameSeleccionarPaqueteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameSeleccionarPaqueteLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addGroup(frameSeleccionarPaqueteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameSeleccionarPaqueteLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSeleccionarServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel10)
+                    .addGroup(frameSeleccionarPaqueteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel9)
+                        .addGroup(frameSeleccionarPaqueteLayout.createSequentialGroup()
+                            .addComponent(btnVolverMenu)
+                            .addGap(147, 147, 147))))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        frameSeleccionarPaqueteLayout.setVerticalGroup(
+            frameSeleccionarPaqueteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameSeleccionarPaqueteLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addGap(14, 14, 14)
+                .addGroup(frameSeleccionarPaqueteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(frameSeleccionarPaqueteLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(btnSeleccionarServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnVolverMenu)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        frameProcesoPago.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        jLabel11.setText("Proceso de pago:");
+
+        jLabel12.setText("Número de tarjeta de crédito/débito:");
+
+        jLabel13.setText("Nombre Titular Tarjeta:");
+
+        jLabel14.setText("CVV:");
+
+        jLabel15.setText("Fecha de Vencimiento:");
+
+        txtCVV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCVVActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Total A Pagar: ");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        jLabel17.setText("El total a pagar depende de la cantidad de productos que añadió a su paquete. ");
+
+        btnVolverPago.setText("Volver");
+        btnVolverPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverPagoActionPerformed(evt);
+            }
+        });
+
+        btnFinalizarPago.setText("Finalizar Pago");
+        btnFinalizarPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinalizarPagoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout frameProcesoPagoLayout = new javax.swing.GroupLayout(frameProcesoPago.getContentPane());
+        frameProcesoPago.getContentPane().setLayout(frameProcesoPagoLayout);
+        frameProcesoPagoLayout.setHorizontalGroup(
+            frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVolverPago)
+                .addGap(113, 113, 113)
+                .addComponent(btnFinalizarPago)
+                .addGap(140, 140, 140))
+            .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(jLabel11))
+                    .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel17)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                        .addGap(241, 241, 241)
+                        .addComponent(jLabel16))
+                    .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtCVV, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameProcesoPagoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombreTitular, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(111, Short.MAX_VALUE))
+        );
+        frameProcesoPagoLayout.setVerticalGroup(
+            frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameProcesoPagoLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(txtNombreTitular, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(txtCVV, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(txtFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(frameProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnVolverPago)
+                    .addComponent(btnFinalizarPago))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel17)
+                .addContainerGap())
+        );
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        jLabel18.setText("La transaccion ha fallado.");
+
+        jLabel19.setText("Por favor revisar el saldo de su cuenta, en caso de producirse más ");
+
+        btnVolverErrorPago.setText("Volver");
+        btnVolverErrorPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverErrorPagoActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("errores comunicarse al correo: proyectochivasayuda@unal.edu.co");
+
+        javax.swing.GroupLayout frameErrorProcesoPagoLayout = new javax.swing.GroupLayout(frameErrorProcesoPago.getContentPane());
+        frameErrorProcesoPago.getContentPane().setLayout(frameErrorProcesoPagoLayout);
+        frameErrorProcesoPagoLayout.setHorizontalGroup(
+            frameErrorProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameErrorProcesoPagoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVolverErrorPago)
+                .addGap(209, 209, 209))
+            .addGroup(frameErrorProcesoPagoLayout.createSequentialGroup()
+                .addGroup(frameErrorProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameErrorProcesoPagoLayout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jLabel18))
+                    .addGroup(frameErrorProcesoPagoLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addGroup(frameErrorProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel19))))
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+        frameErrorProcesoPagoLayout.setVerticalGroup(
+            frameErrorProcesoPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameErrorProcesoPagoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(btnVolverErrorPago)
+                .addContainerGap())
+        );
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        jLabel21.setText("Gracias por comprar con Proyecto chivas");
+
+        jLabel22.setText("Estamos muy agradecidos por tu confianza en nosotros, ");
+
+        btnVolverCompraExitosa.setText("Volver al menu principal");
+        btnVolverCompraExitosa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverCompraExitosaActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setText("esperamos que disfrutes de nuestros servicios!!!");
+
+        javax.swing.GroupLayout frameCompraExitosaLayout = new javax.swing.GroupLayout(frameCompraExitosa.getContentPane());
+        frameCompraExitosa.getContentPane().setLayout(frameCompraExitosaLayout);
+        frameCompraExitosaLayout.setHorizontalGroup(
+            frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel21)
+                .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                        .addComponent(btnVolverCompraExitosa)
+                        .addGap(209, 209, 209))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameCompraExitosaLayout.createSequentialGroup()
+                        .addGroup(frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel22)
+                            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addGap(33, 33, 33)))
+                        .addGap(127, 127, 127))))
+        );
+        frameCompraExitosaLayout.setVerticalGroup(
+            frameCompraExitosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameCompraExitosaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(btnVolverCompraExitosa)
+                .addContainerGap())
+        );
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        jLabel24.setText("Selección de Productos: ");
+
+        jLabel25.setText("Los productos a escoger varían dependiendo del paquete. ");
+
+        jCheckBox_CocaCola.setText("Coca-Cola 3L");
+        jCheckBox_CocaCola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_CocaColaActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_DeTodito.setText("DeTodito Grande");
+
+        jCheckBoxDoritos.setText("Doritos Grande");
+
+        jCheckBox_Sprite.setText("Sprite 3L");
+
+        jCheckBox_CrispetasDulces.setText("Paquete Crispetas Dulces Grande ");
+
+        jCheckBox_CrispetasSaladas.setText("Paquete Crispetas Saladas Grande ");
+
+        jCheckBox_Jet.setText("Chocolatina Jet Grande ");
+
+        jCheckBox_Speed.setText("SpeedMax 1L ");
+
+        jCheckBox_Colombiana.setText("Colombiana 2.5L ");
+
+        jCheckBox_Tostacos.setText("Tostacos Grande  ");
+
+        jCheckBox_Choclitos.setText("Choclitos Grande  ");
+
+        jCheckBox_Manzana.setText("Gaseosa Manzana 2.5L ");
+        jCheckBox_Manzana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_ManzanaActionPerformed(evt);
+            }
+        });
+
+        jLabel26.setText("Costo total:");
+
+        txtCosto.setEditable(false);
+        txtCosto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCostoActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setText("El mínimo de dinero a gastar en este paquete es: 35.000 ");
+
+        btnVolver1.setText("Volver");
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+
+        btnContinuar1.setText("Continuar");
+        btnContinuar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinuar1ActionPerformed(evt);
+            }
+        });
+
+        btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout frameSeleccionProductosLayout = new javax.swing.GroupLayout(frameSeleccionProductos.getContentPane());
+        frameSeleccionProductos.getContentPane().setLayout(frameSeleccionProductosLayout);
+        frameSeleccionProductosLayout.setHorizontalGroup(
+            frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSeleccionProductosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSeleccionProductosLayout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addGap(174, 174, 174))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSeleccionProductosLayout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(152, 152, 152))))
+            .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox_CrispetasSaladas)
+                            .addComponent(jCheckBox_CrispetasDulces)
+                            .addComponent(jCheckBox_Sprite, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox_DeTodito)
+                            .addComponent(jCheckBoxDoritos)
+                            .addComponent(jCheckBox_CocaCola))
+                        .addGap(18, 18, 18)
+                        .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox_Jet)
+                            .addComponent(jCheckBox_Speed)
+                            .addComponent(jCheckBox_Colombiana)
+                            .addComponent(jCheckBox_Tostacos)
+                            .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jCheckBox_Manzana, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jCheckBox_Choclitos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addComponent(jLabel26)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCalcular)
+                    .addComponent(jLabel27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addComponent(btnVolver1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnContinuar1)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        frameSeleccionProductosLayout.setVerticalGroup(
+            frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel25)
+                .addGap(18, 18, 18)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox_CocaCola)
+                    .addComponent(jCheckBox_Manzana))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxDoritos)
+                    .addComponent(jCheckBox_Choclitos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox_DeTodito)
+                    .addComponent(jCheckBox_Tostacos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox_Sprite)
+                    .addComponent(jCheckBox_Colombiana))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox_CrispetasDulces)
+                    .addComponent(jCheckBox_Speed))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox_CrispetasSaladas)
+                    .addComponent(jCheckBox_Jet))
+                .addGap(27, 27, 27)
+                .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(frameSeleccionProductosLayout.createSequentialGroup()
+                        .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel26)
+                            .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCalcular)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel27))
+                    .addGroup(frameSeleccionProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnVolver1)
+                        .addComponent(btnContinuar1)))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -178,7 +678,7 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
-                {null, "25/30", "24/10/2023", "50.000", "Medellín/La Ceja"},
+                {null, "30/30", "24/10/2023", "50.000", "Medellín/La Ceja"},
                 {null, null, "10:00-17:00", null, null},
                 {null, null, null, null, null},
                 {null, "40/60", "31/10/2023", "50.000", "Medellín/Marinilla"},
@@ -274,11 +774,13 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         frameError_nocupos.setVisible(true);
         frameError_nocupos.setLocationRelativeTo(null);
-        frameError_nocupos.setSize(400,320);
+        frameError_nocupos.setSize(400, 320);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        frameAñadirPaquete.setSize(610, 364);
+        frameAñadirPaquete.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -288,19 +790,156 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        PaginaPrincipal a = new PaginaPrincipal();
-        a.setVisible(true);
+        PaginaPrincipal pagina = new PaginaPrincipal();
+        pagina.setVisible(true);
         frameError_nocupos.setVisible(false);
         dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-
+        if (checkSi.isSelected()) {
+            frameSeleccionarPaquete.setLocationRelativeTo(null);
+            frameSeleccionarPaquete.setSize(600, 310);
+            frameSeleccionarPaquete.setVisible(true);
+            frameAñadirPaquete.setVisible(false);
+        } else if (checkNo.isSelected()) {
+            frameAñadirPaquete.setVisible(false);
+            frameProcesoPago.setLocationRelativeTo(null);
+            frameProcesoPago.setSize(601, 364);
+            frameProcesoPago.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Seleccione una opcion.");
+        }
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     private void btnVolverAñadirPaqueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAñadirPaqueteActionPerformed
         frameAñadirPaquete.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_btnVolverAñadirPaqueteActionPerformed
+
+    private void btnVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverMenuActionPerformed
+        PaginaPrincipal principal = new PaginaPrincipal();
+        principal.setVisible(true);
+        frameSeleccionarPaquete.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_btnVolverMenuActionPerformed
+
+    private void btnSeleccionarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarServicioActionPerformed
+        if (listServicios.getSelectedIndex() == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione correctamente el servicio que desea ampliar el paquete");
+        } else {
+            frameSeleccionProductos.setLocationRelativeTo(null);
+            frameSeleccionProductos.setSize(614, 416);
+            frameSeleccionProductos.setVisible(true);
+            frameSeleccionarPaquete.setVisible(false);
+        }
+    }//GEN-LAST:event_btnSeleccionarServicioActionPerformed
+
+    private void btnVolverPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverPagoActionPerformed
+        if (checkSi.isSelected()) {
+            frameSeleccionProductos.setVisible(true);
+            frameSeleccionProductos.setLocationRelativeTo(null);
+            frameProcesoPago.setVisible(false);
+        }else{
+            frameAñadirPaquete.setVisible(true);
+            frameProcesoPago.setVisible(false);
+        }
+
+    }//GEN-LAST:event_btnVolverPagoActionPerformed
+
+    private void btnFinalizarPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarPagoActionPerformed
+        if (!(txtNumeroTarjeta.getText().equals("") || txtCVV.getText().equals("") || txtFechaVencimiento.getText().equals("") || txtNombreTitular.getText().equals("") || txtNumeroTarjeta.getText().equals(""))) {
+            frameCompraExitosa.setVisible(true);
+            frameCompraExitosa.setLocationRelativeTo(this);
+            frameCompraExitosa.setSize(600, 200);
+        } else {
+            frameErrorProcesoPago.setVisible(true);
+            frameErrorProcesoPago.setLocationRelativeTo(this);
+            frameErrorProcesoPago.setSize(550, 200);
+        }
+    }//GEN-LAST:event_btnFinalizarPagoActionPerformed
+
+    private void btnVolverErrorPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverErrorPagoActionPerformed
+        frameErrorProcesoPago.setVisible(false);
+    }//GEN-LAST:event_btnVolverErrorPagoActionPerformed
+
+    private void btnVolverCompraExitosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverCompraExitosaActionPerformed
+        dispose();
+        frameProcesoPago.setVisible(false);
+        frameCompraExitosa.setVisible(false);
+        PaginaPrincipal principal = new PaginaPrincipal();
+        principal.setVisible(true);
+    }//GEN-LAST:event_btnVolverCompraExitosaActionPerformed
+
+    private void jCheckBox_CocaColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_CocaColaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox_CocaColaActionPerformed
+
+    private void jCheckBox_ManzanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ManzanaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox_ManzanaActionPerformed
+
+    private void txtCostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCostoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCostoActionPerformed
+
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+        frameSeleccionarPaquete.setVisible(true);
+        frameSeleccionProductos.setVisible(false);
+    }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void btnContinuar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuar1ActionPerformed
+        frameProcesoPago.setLocationRelativeTo(null);
+        frameProcesoPago.setSize(601, 364);
+        frameProcesoPago.setVisible(true);
+        frameSeleccionProductos.setVisible(false);
+    }//GEN-LAST:event_btnContinuar1ActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        total = 0;
+
+        if (jCheckBox_CocaCola.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBoxDoritos.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBox_DeTodito.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBox_Sprite.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBox_CrispetasDulces.isSelected()) {
+            total += 8000;
+        }
+        if (jCheckBox_CrispetasSaladas.isSelected()) {
+            total += 8000;
+        }
+        if (jCheckBox_Manzana.isSelected()) {
+            total += 9000;
+        }
+        if (jCheckBox_Choclitos.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBox_Tostacos.isSelected()) {
+            total += 10000;
+        }
+        if (jCheckBox_Colombiana.isSelected()) {
+            total += 9000;
+        }
+        if (jCheckBox_Speed.isSelected()) {
+            total += 6000;
+        }
+        if (jCheckBox_Jet.isSelected()) {
+            total += 6000;
+        }
+        txtCosto.setText(String.valueOf(total));
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void txtCVVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCVVActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCVVActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,26 +977,78 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnContinuar;
+    private javax.swing.JButton btnContinuar1;
+    private javax.swing.JButton btnFinalizarPago;
+    private javax.swing.JButton btnSeleccionarServicio;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JButton btnVolverAñadirPaquete;
+    private javax.swing.JButton btnVolverCompraExitosa;
+    private javax.swing.JButton btnVolverErrorPago;
+    private javax.swing.JButton btnVolverMenu;
+    private javax.swing.JButton btnVolverPago;
     private javax.swing.JCheckBox checkNo;
     private javax.swing.JCheckBox checkSi;
     private javax.swing.JFrame frameAñadirPaquete;
+    private javax.swing.JFrame frameCompraExitosa;
+    private javax.swing.JFrame frameErrorProcesoPago;
     private javax.swing.JFrame frameError_nocupos;
+    private javax.swing.JFrame frameProcesoPago;
+    private javax.swing.JFrame frameSeleccionProductos;
+    private javax.swing.JFrame frameSeleccionarPaquete;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JCheckBox jCheckBoxDoritos;
+    private javax.swing.JCheckBox jCheckBox_Choclitos;
+    private javax.swing.JCheckBox jCheckBox_CocaCola;
+    private javax.swing.JCheckBox jCheckBox_Colombiana;
+    private javax.swing.JCheckBox jCheckBox_CrispetasDulces;
+    private javax.swing.JCheckBox jCheckBox_CrispetasSaladas;
+    private javax.swing.JCheckBox jCheckBox_DeTodito;
+    private javax.swing.JCheckBox jCheckBox_Jet;
+    private javax.swing.JCheckBox jCheckBox_Manzana;
+    private javax.swing.JCheckBox jCheckBox_Speed;
+    private javax.swing.JCheckBox jCheckBox_Sprite;
+    private javax.swing.JCheckBox jCheckBox_Tostacos;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JList<String> listServicios;
+    private javax.swing.JTextField txtCVV;
+    private javax.swing.JTextField txtCosto;
+    private javax.swing.JTextField txtFechaVencimiento;
+    private javax.swing.JTextField txtNombreTitular;
+    private javax.swing.JTextField txtNumeroTarjeta;
     // End of variables declaration//GEN-END:variables
 }
