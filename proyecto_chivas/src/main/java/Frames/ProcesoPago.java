@@ -15,6 +15,7 @@ public class ProcesoPago extends javax.swing.JFrame {
      */
     public ProcesoPago() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
