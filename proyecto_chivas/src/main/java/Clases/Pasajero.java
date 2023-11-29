@@ -17,6 +17,8 @@ public class Pasajero extends Cliente{
     private long identificacion;
     private List<Object> servicios = new LinkedList<>();
     
+    private Pasajero(){}
+    
     public Pasajero(long identificacion){
         this.identificacion = identificacion;
     }
