@@ -10,6 +10,8 @@ package Clases;
  */
 
 public class Servicio {
+    protected int servicio_id;
+    
     protected String imagen;
     protected int aforoDisponible;
     protected String horario;
@@ -19,18 +21,28 @@ public class Servicio {
     private Servicio(){}
     
     //Constructor Servicio con horario
-    public Servicio(String imagen, int aforoDisponible, String horario, int precio) {
+    public Servicio(int servicio_id,String imagen, int aforoDisponible, String horario, int precio) {
+        this.servicio_id = servicio_id;
         this.imagen = imagen;
         this.aforoDisponible = aforoDisponible;
         this.horario = horario;
         this.precio = precio;
     }
     //Constructor Servicio sin horario
-    public Servicio(String imagen, int aforoDisponible, int precio) {
+    public Servicio(int servicio_id, String imagen, int aforoDisponible, int precio) {
+        this.servicio_id = servicio_id;
         this.imagen = imagen;
         this.aforoDisponible = aforoDisponible;
         this.precio = precio;
     }
+    public int getID() {
+        return servicio_id;
+    }
+    
+    public void setID(int servicio_id) {
+        this.servicio_id = servicio_id;
+    }
+    
     public String getImagen() {
         return imagen;
     }

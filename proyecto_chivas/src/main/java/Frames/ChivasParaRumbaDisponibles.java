@@ -677,18 +677,18 @@ public class ChivasParaRumbaDisponibles extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, "30/30", "24/10/2023", "50.000", "Medellín/La Ceja"},
-                {null, null, "10:00-17:00", null, null},
-                {null, null, null, null, null},
-                {null, "40/60", "31/10/2023", "50.000", "Medellín/Marinilla"},
-                {null, null, "8:00 - 06:00", null, null},
-                {null, null, null, null, null},
-                {null, "7/20", "15/10/2023", "50.000", "Medellín/Rionegro"},
-                {null, null, "10:00 - 16:00", null, null}
+                {null, null, null, null},
+                {null, "30/30", "24/10/2023", "50.000"},
+                {null, null, "10:00-17:00", null},
+                {null, null, null, null},
+                {null, "40/60", "31/10/2023", "50.000"},
+                {null, null, "8:00 - 06:00", null},
+                {null, null, null, null},
+                {null, "7/20", "15/10/2023", "50.000"},
+                {null, null, "10:00 - 16:00", null}
             },
             new String [] {
-                "IMAGEN", "AFORO", "HORARIO", "PRECIO", "SALIDA/DESTINO"
+                "IMAGEN", "AFORO", "HORARIO", "PRECIO"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

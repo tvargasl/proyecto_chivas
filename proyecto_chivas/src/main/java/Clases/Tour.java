@@ -19,8 +19,8 @@ public class Tour extends Servicio{
         this.descripcion = descripcion;
     }
     //Usa el constructor de servicio sin el horario
-    public Tour(String imagen, int aforoDisponible, int precio, String descripcion) {
-        super(imagen, aforoDisponible, precio);
+    public Tour(int servicio_id, String imagen, int aforoDisponible, int precio, String descripcion) {
+        super(servicio_id, imagen, aforoDisponible, precio);
         this.descripcion = descripcion;
     }
     

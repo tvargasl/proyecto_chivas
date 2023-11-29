@@ -13,16 +13,27 @@ import java.util.List;
  * @author JEFERSON
  */
 public class Paquete {
+    private int paquete_id;
+            
     private String descripcion;
     private int precio;
     private List<HashMap> productos;
 
     private Paquete(){}
     
-    public Paquete(String descripcion, int precio, LinkedList<HashMap> productos){
+    public Paquete(int paquete_id, String descripcion, int precio, LinkedList<HashMap> productos){
+        this.paquete_id = paquete_id;
         this.descripcion = descripcion;
         this.precio = precio;
         this.productos = productos;
+    }
+    
+    public int getID() {
+        return paquete_id;
+    }
+    
+    public void setID(int paquete_id) {
+        this.paquete_id = paquete_id;
     }
 
     public String getDescripcion() {

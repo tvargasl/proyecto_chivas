@@ -19,14 +19,14 @@ public class ChivaParaRumba extends Servicio{
         this.paquete = paquete;
     }
     //Constructor ChivaParaRumba con paquete
-    public ChivaParaRumba(String imagen, int aforoDisponible, String horario, int precio, Paquete paquete) {
-        super(imagen,aforoDisponible,horario,precio);
+    public ChivaParaRumba(int servicio_id, String imagen, int aforoDisponible, String horario, int precio, Paquete paquete) {
+        super(servicio_id,imagen,aforoDisponible,horario,precio);
         super.tipo = "ChivaRumba";
         this.paquete = paquete;
     }
     //Constructor ChivaParaRumba sin paquete
-    public ChivaParaRumba(String imagen, int aforoDisponible, String horario, int precio) {
-        super(imagen,aforoDisponible,horario,precio);
+    public ChivaParaRumba(int servicio_id, String imagen, int aforoDisponible, String horario, int precio) {
+        super(servicio_id,imagen,aforoDisponible,horario,precio);
         super.tipo = "ChivaRumba";
         this.paquete = null;
     }
